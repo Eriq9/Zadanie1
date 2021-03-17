@@ -31,7 +31,7 @@ namespace UnitTestProject1
                 values.Add(rng.nextInt(1, 29));
             for (int k = 0; k < 1; k++)
                 weights.Add(5);
-            var b1 = new Program.Backpack(50);
+            var b1 = new Backpack(50);
             b1.Load(index, values, weights);
             int result = b1.Load_weights;
             Assert.IsTrue(result >= 1);
@@ -53,7 +53,7 @@ namespace UnitTestProject1
                 values.Add(rng.nextInt(1, 29));
             for (int k = 0; k < 1; k++)
                 weights.Add(52);
-            var b1 = new Program.Backpack(50);
+            var b1 = new Backpack(50);
             b1.Load(index, values, weights);
             int result = b1.Load_weights;
             Assert.IsTrue(result == 0);
@@ -78,7 +78,7 @@ namespace UnitTestProject1
                 weights.Add(25);
                 weights.Add(10);
                 weights.Add(4);
-            var b1 = new Program.Backpack(50);
+            var b1 = new Backpack(50);
             b1.Load(index, values, weights);
             Assert.IsTrue(b1.Load_value == 9);
         }
@@ -104,7 +104,7 @@ namespace UnitTestProject1
             weights.Add(10);
             weights.Add(4);
             weights.Add(30);
-            var b1 = new Program.Backpack(50);
+            var b1 = new Backpack(50);
             b1.Load(index, values, weights);
             Assert.IsTrue(b1.Load_value == 16);
         }
